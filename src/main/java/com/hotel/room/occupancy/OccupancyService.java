@@ -4,13 +4,15 @@ import com.hotel.room.occupancy.model.OccupancyInputModel;
 import com.hotel.room.occupancy.model.OccupancyOutputModel;
 import org.springframework.stereotype.Service;
 
+import java.math.BigDecimal;
+
 @Service
 public class OccupancyService {
 
     public OccupancyOutputModel getOccupancyResult(OccupancyInputModel occupancyInputModel){
 
 
-       return new OccupancyOutputModel();
+       return new OccupancyOutputModel(3, 4, BigDecimal.TEN, BigDecimal.TWO);
     }
 
 
