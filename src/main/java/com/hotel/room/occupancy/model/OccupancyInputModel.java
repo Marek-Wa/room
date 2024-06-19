@@ -5,16 +5,27 @@ import java.util.List;
 
 public class OccupancyInputModel {
 
-    public OccupancyInputModel(Integer freePremiumRooms, Integer freeEconomyRooms, List<BigDecimal> roomPrices) {
+    public OccupancyInputModel(Integer freePremiumRooms, Integer freeEconomyRooms, List<BigDecimal> guestsRoomPrices) {
         this.freePremiumRooms = freePremiumRooms;
         this.freeEconomyRooms = freeEconomyRooms;
-        this.roomPrices = roomPrices;
+        this.guestsRoomPrices = guestsRoomPrices;
     }
 
     private Integer freePremiumRooms;
 
     private Integer freeEconomyRooms;
 
-    private List<BigDecimal> roomPrices;
+    private List<BigDecimal> guestsRoomPrices;
 
+    public Integer getFreePremiumRooms() {
+        return freePremiumRooms;
+    }
+
+    public Integer getFreeEconomyRooms() {
+        return freeEconomyRooms;
+    }
+
+    public List<BigDecimal> getGuestsRoomPrices() {
+        return guestsRoomPrices;
+    }
 }

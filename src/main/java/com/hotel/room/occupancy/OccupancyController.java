@@ -27,14 +27,8 @@ public class OccupancyController {
 
     @PostMapping(path = "/calculate", produces= MediaType.APPLICATION_JSON_VALUE)
     @ResponseStatus(HttpStatus.OK)
-    public OccupancyOutputModel calculateOccupancy(OccupancyInputModel occupancyInputModel){
-        BigDecimal room1 = BigDecimal.valueOf(23);
-        BigDecimal room2 = BigDecimal.valueOf(45);
-        BigDecimal room3 = BigDecimal.valueOf(155);
-        List<BigDecimal> roomPrices = List.of(room1, room2, room3);
-        OccupancyInputModel occupancyInputModel1 = new OccupancyInputModel(5, 6, roomPrices);
-        return occupancyService.getOccupancyResult(occupancyInputModel1);
-
+    public OccupancyOutputModel calculateOccupancy(@RequestBody OccupancyInputModel occupancyInputModel){
+        return occupancyService.getOccupancyResult(occupancyInputModel);
     }
 
 }

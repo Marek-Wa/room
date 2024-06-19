@@ -4,7 +4,7 @@ import com.fasterxml.jackson.annotation.JsonAutoDetect;
 
 import java.math.BigDecimal;
 
-//@JsonAutoDetect
+
 public class OccupancyOutputModel {
 
     public OccupancyOutputModel(Integer usedPremiumRooms, Integer usedEconomyRooms, BigDecimal premiumRoomsPrice, BigDecimal economyRoomsPrice) {
