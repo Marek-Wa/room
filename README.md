@@ -21,3 +21,13 @@ an output JSON example:
 }
 
 Test: OccupancyServiceTest
+
+--------------------
+COMMENTS:
+
+TO BE DONE:
+- more tests (especially some edge cases e.g. with null, empty, 0) with different input
+- an extraction of the first "if" condition to a separate method (in calculateOccupancy() ) or work on removal the condition - so implementing a smarter logic without any if
+- splitting calculateOccupancy() into more methods. I thought about it a bit but did not find any better and obvious solution.
+- removal of com.fasterxml.jackson.core dependency - it is not needed.
+
