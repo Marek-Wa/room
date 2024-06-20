@@ -36,41 +36,41 @@ public class OccupancyServiceTest {
     public void test1(){
         OccupancyInputModel occupancyInputModel = new OccupancyInputModel(3, 3, GUESTS_ROOM_PRICES);
         OccupancyOutputModel occupancyOutputModel = occupancyService.getOccupancyResult(occupancyInputModel);
-        assertEquals(3, occupancyOutputModel.getUsedPremiumRooms());
-        assertEquals(3, occupancyOutputModel.getUsedEconomyRooms());
-        assertEquals(BigDecimal.valueOf(738), occupancyOutputModel.getPremiumRoomsPrice());
-        assertEquals(BigDecimal.valueOf(167.99), occupancyOutputModel.getEconomyRoomsPrice());
+        assertEquals(3, occupancyOutputModel.usedPremiumRooms());
+        assertEquals(3, occupancyOutputModel.usedEconomyRooms());
+        assertEquals(BigDecimal.valueOf(738), occupancyOutputModel.premiumRoomsPrice());
+        assertEquals(BigDecimal.valueOf(167.99), occupancyOutputModel.economyRoomsPrice());
     }
 
     @Test
     public void test2(){
         OccupancyInputModel occupancyInputModel = new OccupancyInputModel(7, 5, GUESTS_ROOM_PRICES);
         OccupancyOutputModel occupancyOutputModel = occupancyService.getOccupancyResult(occupancyInputModel);
-        assertEquals(6, occupancyOutputModel.getUsedPremiumRooms());
-        assertEquals(4, occupancyOutputModel.getUsedEconomyRooms());
-        assertEquals(BigDecimal.valueOf(1054), occupancyOutputModel.getPremiumRoomsPrice());
-        assertEquals(BigDecimal.valueOf(189.99), occupancyOutputModel.getEconomyRoomsPrice());
+        assertEquals(6, occupancyOutputModel.usedPremiumRooms());
+        assertEquals(4, occupancyOutputModel.usedEconomyRooms());
+        assertEquals(BigDecimal.valueOf(1054), occupancyOutputModel.premiumRoomsPrice());
+        assertEquals(BigDecimal.valueOf(189.99), occupancyOutputModel.economyRoomsPrice());
     }
 
     @Test
     public void test3(){
         OccupancyInputModel occupancyInputModel = new OccupancyInputModel(2, 7, GUESTS_ROOM_PRICES);
         OccupancyOutputModel occupancyOutputModel = occupancyService.getOccupancyResult(occupancyInputModel);
-        assertEquals(2, occupancyOutputModel.getUsedPremiumRooms());
-        assertEquals(4, occupancyOutputModel.getUsedEconomyRooms());
-        assertEquals(BigDecimal.valueOf(583), occupancyOutputModel.getPremiumRoomsPrice());
-        assertEquals(BigDecimal.valueOf(189.99), occupancyOutputModel.getEconomyRoomsPrice());
+        assertEquals(2, occupancyOutputModel.usedPremiumRooms());
+        assertEquals(4, occupancyOutputModel.usedEconomyRooms());
+        assertEquals(BigDecimal.valueOf(583), occupancyOutputModel.premiumRoomsPrice());
+        assertEquals(BigDecimal.valueOf(189.99), occupancyOutputModel.economyRoomsPrice());
     }
 
     @Test
     public void test4(){
         OccupancyInputModel occupancyInputModel = new OccupancyInputModel(7, 1, GUESTS_ROOM_PRICES);
         OccupancyOutputModel occupancyOutputModel = occupancyService.getOccupancyResult(occupancyInputModel);
-        assertEquals(7, occupancyOutputModel.getUsedPremiumRooms());
-        assertEquals(1, occupancyOutputModel.getUsedEconomyRooms());
+        assertEquals(7, occupancyOutputModel.usedPremiumRooms());
+        assertEquals(1, occupancyOutputModel.usedEconomyRooms());
         //assertEquals(BigDecimal.valueOf(1153), occupancyOutputModel.getPremiumRoomsPrice()); //?
-        assertEquals(BigDecimal.valueOf(1153.99), occupancyOutputModel.getPremiumRoomsPrice());
+        assertEquals(BigDecimal.valueOf(1153.99), occupancyOutputModel.premiumRoomsPrice());
         //assertEquals(BigDecimal.valueOf(45.99), occupancyOutputModel.getEconomyRoomsPrice()); // ?
-        assertEquals(BigDecimal.valueOf(45), occupancyOutputModel.getEconomyRoomsPrice()); // ?
+        assertEquals(BigDecimal.valueOf(45), occupancyOutputModel.economyRoomsPrice()); // ?
     }
 }
