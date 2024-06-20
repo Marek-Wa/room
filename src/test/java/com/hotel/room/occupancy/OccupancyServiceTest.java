@@ -35,7 +35,7 @@ public class OccupancyServiceTest {
     @Test
     public void test1(){
         OccupancyInputModel occupancyInputModel = new OccupancyInputModel(3, 3, GUESTS_ROOM_PRICES);
-        OccupancyOutputModel occupancyOutputModel = occupancyService.getOccupancyResult(occupancyInputModel);
+        OccupancyOutputModel occupancyOutputModel = occupancyService.calculateOccupancy(occupancyInputModel);
         assertEquals(3, occupancyOutputModel.usedPremiumRooms());
         assertEquals(3, occupancyOutputModel.usedEconomyRooms());
         assertEquals(BigDecimal.valueOf(738), occupancyOutputModel.premiumRoomsPrice());
@@ -45,7 +45,7 @@ public class OccupancyServiceTest {
     @Test
     public void test2(){
         OccupancyInputModel occupancyInputModel = new OccupancyInputModel(7, 5, GUESTS_ROOM_PRICES);
-        OccupancyOutputModel occupancyOutputModel = occupancyService.getOccupancyResult(occupancyInputModel);
+        OccupancyOutputModel occupancyOutputModel = occupancyService.calculateOccupancy(occupancyInputModel);
         assertEquals(6, occupancyOutputModel.usedPremiumRooms());
         assertEquals(4, occupancyOutputModel.usedEconomyRooms());
         assertEquals(BigDecimal.valueOf(1054), occupancyOutputModel.premiumRoomsPrice());
@@ -55,7 +55,7 @@ public class OccupancyServiceTest {
     @Test
     public void test3(){
         OccupancyInputModel occupancyInputModel = new OccupancyInputModel(2, 7, GUESTS_ROOM_PRICES);
-        OccupancyOutputModel occupancyOutputModel = occupancyService.getOccupancyResult(occupancyInputModel);
+        OccupancyOutputModel occupancyOutputModel = occupancyService.calculateOccupancy(occupancyInputModel);
         assertEquals(2, occupancyOutputModel.usedPremiumRooms());
         assertEquals(4, occupancyOutputModel.usedEconomyRooms());
         assertEquals(BigDecimal.valueOf(583), occupancyOutputModel.premiumRoomsPrice());
@@ -65,7 +65,7 @@ public class OccupancyServiceTest {
     @Test
     public void test4(){
         OccupancyInputModel occupancyInputModel = new OccupancyInputModel(7, 1, GUESTS_ROOM_PRICES);
-        OccupancyOutputModel occupancyOutputModel = occupancyService.getOccupancyResult(occupancyInputModel);
+        OccupancyOutputModel occupancyOutputModel = occupancyService.calculateOccupancy(occupancyInputModel);
         assertEquals(7, occupancyOutputModel.usedPremiumRooms());
         assertEquals(1, occupancyOutputModel.usedEconomyRooms());
         //assertEquals(BigDecimal.valueOf(1153), occupancyOutputModel.getPremiumRoomsPrice()); //?

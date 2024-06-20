@@ -13,7 +13,7 @@ public class OccupancyService {
 
     private static final BigDecimal PREMIUM_LIMIT = BigDecimal.valueOf(100);
 
-    public OccupancyOutputModel getOccupancyResult(OccupancyInputModel occupancyInputModel) {
+    public OccupancyOutputModel calculateOccupancy(OccupancyInputModel occupancyInputModel) {
 
         Integer freeEconomyRooms = occupancyInputModel.freeEconomyRooms();
         Integer freePremiumRooms = occupancyInputModel.freePremiumRooms();

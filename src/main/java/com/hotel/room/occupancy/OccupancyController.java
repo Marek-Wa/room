@@ -21,7 +21,7 @@ public class OccupancyController {
     @PostMapping(path = "/calculate", produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseStatus(HttpStatus.OK)
     public OccupancyOutputModel calculateOccupancy(@RequestBody OccupancyInputModel occupancyInputModel) {
-        return occupancyService.getOccupancyResult(occupancyInputModel);
+        return occupancyService.calculateOccupancy(occupancyInputModel);
     }
 
 }
